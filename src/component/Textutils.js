@@ -28,7 +28,7 @@ export default function Textutils(props) {
     const handleCopy = (event) => {
         let a = document.getElementById("textarea");
         a.select();
-         navigator.clipboard.writeText(a.value);
+        navigator.clipboard.writeText(a.value);
         //  alert("Copied Text : "+text)
         props.showAlert("text copied to clipboard", "success")
     }
@@ -51,7 +51,7 @@ export default function Textutils(props) {
                 {/* <button className="btn btn-primary"></button> */}
             </div>
             <p className='mt-4'>Your Text contain : {text.split(" ").filter((element) => { return element.length !== 0; }).length} Words {text.length} Character</p>
-            <p> Text Preview: {text.length>'0'?text:'Enter some text in Textbox for preview'}</p>
+            <p> Text Preview: {text.length > '0' ? text : 'Enter some text in Textbox for preview'}</p>
 
         </div>
     )
